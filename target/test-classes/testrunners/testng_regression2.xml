@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="trcrm app regression suite">
+	<test name="Login Page test" verbose="2">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.qa.trcrm.tests.LoginPageTest3" />
+		</classes>
+	</test>
+	<test name="Home Page test" verbose="2">
+		<parameter name="browser" value="firefox"></parameter>
+		<classes>
+			<class name="com.qa.trcrm.tests.HomePageTest3" />
+		</classes>
+	</test>
+</suite>
