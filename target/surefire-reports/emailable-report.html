@@ -8,16 +8,17 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Surefire suite</th></tr>
-<tr><td><a href="#t0">Surefire test</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">56,418</td><td></td><td></td></tr>
+<tr><th colspan="7">trcrm app sanity suite</th></tr>
+<tr><td><a href="#t0">Login Page test</a></td><td class="num">2</td><td class="num">0</td><td class="num attn">1</td><td class="num">41,574</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">com.qa.trcrm.tests.HomePageTest</td><td><a href="#m0">verifyHomePageHeaderTest</a></td><td rowspan="1">1687287370467</td><td rowspan="1">93</td></tr><tr class="passedeven"><td><a href="#m1">verifyHomePageTitleTest</a></td><td rowspan="1">1687287370401</td><td rowspan="1">40</td></tr><tr class="passedeven"><td><a href="#m2">verifyLoggedInUserTest</a></td><td rowspan="1">1687287370704</td><td rowspan="1">53</td></tr><tr class="passedodd"><td rowspan="3">com.qa.trcrm.tests.LoginPageTest</td><td><a href="#m3">loginTest</a></td><td rowspan="1">1687287370758</td><td rowspan="1">13996</td></tr><tr class="passedodd"><td><a href="#m4">verifyLoginPageTitleTest</a></td><td rowspan="1">1687287370445</td><td rowspan="1">21</td></tr><tr class="passedodd"><td><a href="#m5">verifySignNowLinkTest</a></td><td rowspan="1">1687287370561</td><td rowspan="1">142</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">trcrm app sanity suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Login Page test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.qa.trcrm.tests.LoginPageTest</td><td><a href="#m0">verifySignNowLinkTest</a></td><td rowspan="1">1687425584438</td><td rowspan="1">838</td></tr><tr><th colspan="4">Login Page test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.qa.trcrm.tests.LoginPageTest</td><td><a href="#m1">loginTest</a></td><td rowspan="1">1687425585313</td><td rowspan="1">13527</td></tr><tr class="passedeven"><td><a href="#m2">verifyLoginPageTitleTest</a></td><td rowspan="1">1687425582910</td><td rowspan="1">1525</td></tr></tbody>
 </table>
-<h2>Surefire test</h2><h3 id="m0">com.qa.trcrm.tests.HomePageTest#verifyHomePageHeaderTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.qa.trcrm.tests.HomePageTest#verifyHomePageTitleTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.qa.trcrm.tests.HomePageTest#verifyLoggedInUserTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.qa.trcrm.tests.LoginPageTest#loginTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.qa.trcrm.tests.LoginPageTest#verifyLoginPageTitleTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">com.qa.trcrm.tests.LoginPageTest#verifySignNowLinkTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Login Page test</h2><h3 id="m0">com.qa.trcrm.tests.LoginPageTest#verifySignNowLinkTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebElement.isDisplayed()&quot; because the return value of &quot;com.qa.trcrm.utils.ElementUtil.getElement(org.openqa.selenium.By)&quot; is null
+	at com.qa.trcrm.utils.ElementUtil.doIsDisplayed(ElementUtil.java:81)
+	at com.qa.trcrm.pages.LoginPage.verifySignUpLink(LoginPage.java:61)
+	at com.qa.trcrm.tests.LoginPageTest.verifySignNowLinkTest(LoginPageTest.java:45)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.qa.trcrm.tests.LoginPageTest#loginTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.qa.trcrm.tests.LoginPageTest#verifyLoginPageTitleTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

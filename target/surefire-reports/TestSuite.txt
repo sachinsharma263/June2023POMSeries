@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 57.552 s - in TestSuite
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 44.453 s <<< FAILURE! - in TestSuite
+verifySignNowLinkTest(com.qa.trcrm.tests.LoginPageTest)  Time elapsed: 2.026 s  <<< FAILURE!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.isDisplayed()" because the return value of "com.qa.trcrm.utils.ElementUtil.getElement(org.openqa.selenium.By)" is null
+	at com.qa.trcrm.tests.LoginPageTest.verifySignNowLinkTest(LoginPageTest.java:45)
+
