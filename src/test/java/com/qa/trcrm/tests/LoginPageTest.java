@@ -14,7 +14,7 @@ import com.qa.trcrm.base.BasePage3;
 import com.qa.trcrm.pages.HomePage;
 
 import com.qa.trcrm.pages.LoginPage;
-
+import com.qa.trcrm.pojo.Credentials;
 import com.qa.trcrm.utils.AppConstants;
 
 public class LoginPageTest {
@@ -24,6 +24,7 @@ public class LoginPageTest {
 	Properties prop;
 	LoginPage loginPage;
 	HomePage homePage;
+	Credentials credentials;
 
 	@BeforeTest
 	public void setUp() {
@@ -31,6 +32,7 @@ public class LoginPageTest {
 		prop = basePage.init_prop();
 		driver = basePage.init_driver(prop);
 		loginPage = new LoginPage(driver);
+		credentials=new Credentials(prop.getProperty("username"),prop.getProperty("password"));
 
 	}
 
@@ -47,7 +49,7 @@ public class LoginPageTest {
 
 	@Test(priority = 3)
 	public void loginTest() {
-		homePage = loginPage.doLogin(prop.getProperty("username"), prop.getProperty("password"));
+		homePage = loginPage.doLogin(credentials);
 		Assert.assertEquals(homePage.getHomePageHeader(), AppConstants.HOME_PAGE_HEADER);
 
 	}
