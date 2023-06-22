@@ -6,10 +6,8 @@
       <class name="com.qa.trcrm.tests.LoginPageTest">
         <methods>
           <include name="verifySignNowLinkTest"/>
-          <include name="loginTest"/>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="verifyLoginPageTitleTest"/>
         </methods>
       </class> <!-- com.qa.trcrm.tests.LoginPageTest -->
     </classes>

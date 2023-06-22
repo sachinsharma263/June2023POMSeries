@@ -35,16 +35,16 @@
       <![CDATA[status 1]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-06-21T17:44:39Z" name="trcrm app regression suite" finished-at="2023-06-21T17:47:13Z" duration-ms="153168">
+  <suite started-at="2023-06-22T10:28:16Z" name="trcrm app regression suite" finished-at="2023-06-22T10:29:50Z" duration-ms="94364">
     <groups>
     </groups>
-    <test started-at="2023-06-21T17:44:39Z" name="Login Page test" finished-at="2023-06-21T17:45:58Z" duration-ms="78869">
+    <test started-at="2023-06-22T10:28:16Z" name="Login Page test" finished-at="2023-06-22T10:29:22Z" duration-ms="66350">
       <class name="com.qa.trcrm.tests.LoginPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.qa.trcrm.tests.LoginPageTest@2250b9f2]" started-at="2023-06-21T17:44:39Z" name="setUp" finished-at="2023-06-21T17:44:54Z" duration-ms="15068" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.qa.trcrm.tests.LoginPageTest@2250b9f2]" started-at="2023-06-22T10:28:16Z" name="setUp" finished-at="2023-06-22T10:29:07Z" duration-ms="51133" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyLoginPageTitleTest()[pri:1, instance:com.qa.trcrm.tests.LoginPageTest@2250b9f2]" started-at="2023-06-21T17:44:55Z" name="verifyLoginPageTitleTest" finished-at="2023-06-21T17:44:55Z" duration-ms="109" status="PASS">
+        <test-method signature="verifyLoginPageTitleTest()[pri:1, instance:com.qa.trcrm.tests.LoginPageTest@2250b9f2]" started-at="2023-06-22T10:29:07Z" name="verifyLoginPageTitleTest" finished-at="2023-06-22T10:29:07Z" duration-ms="84" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Test cases verifyLoginPageTitleTest]]>
@@ -54,7 +54,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- verifyLoginPageTitleTest -->
-        <test-method signature="verifySignNowLinkTest()[pri:2, instance:com.qa.trcrm.tests.LoginPageTest@2250b9f2]" started-at="2023-06-21T17:44:55Z" name="verifySignNowLinkTest" finished-at="2023-06-21T17:44:55Z" duration-ms="119" status="FAIL">
+        <test-method signature="verifySignNowLinkTest()[pri:2, instance:com.qa.trcrm.tests.LoginPageTest@2250b9f2]" started-at="2023-06-22T10:29:07Z" name="verifySignNowLinkTest" finished-at="2023-06-22T10:29:08Z" duration-ms="409" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <message>
               <![CDATA[Cannot invoke "org.openqa.selenium.WebElement.isDisplayed()" because the return value of "com.qa.trcrm.utils.ElementUtil.getElement(org.openqa.selenium.By)" is null]]>
@@ -62,8 +62,8 @@
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.isDisplayed()" because the return value of "com.qa.trcrm.utils.ElementUtil.getElement(org.openqa.selenium.By)" is null
 at com.qa.trcrm.utils.ElementUtil.doIsDisplayed(ElementUtil.java:81)
-at com.qa.trcrm.pages.LoginPage.verifySignUpLink(LoginPage.java:61)
-at com.qa.trcrm.tests.LoginPageTest.verifySignNowLinkTest(LoginPageTest.java:45)
+at com.qa.trcrm.pages.LoginPage.verifySignUpLink(LoginPage.java:62)
+at com.qa.trcrm.tests.LoginPageTest.verifySignNowLinkTest(LoginPageTest.java:47)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -98,7 +98,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </line>
           </reporter-output>
         </test-method> <!-- verifySignNowLinkTest -->
-        <test-method signature="loginTest()[pri:3, instance:com.qa.trcrm.tests.LoginPageTest@2250b9f2]" started-at="2023-06-21T17:44:55Z" name="loginTest" finished-at="2023-06-21T17:45:57Z" duration-ms="61505" status="PASS">
+        <test-method signature="loginTest()[pri:3, instance:com.qa.trcrm.tests.LoginPageTest@2250b9f2]" started-at="2023-06-22T10:29:08Z" name="loginTest" finished-at="2023-06-22T10:29:20Z" duration-ms="12349" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Test cases loginTest]]>
@@ -108,19 +108,19 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </line>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.trcrm.tests.LoginPageTest@2250b9f2]" started-at="2023-06-21T17:45:57Z" name="tearDown" finished-at="2023-06-21T17:45:58Z" duration-ms="1590" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.trcrm.tests.LoginPageTest@2250b9f2]" started-at="2023-06-22T10:29:20Z" name="tearDown" finished-at="2023-06-22T10:29:22Z" duration-ms="1942" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.qa.trcrm.tests.LoginPageTest -->
     </test> <!-- Login Page test -->
-    <test started-at="2023-06-21T17:45:59Z" name="Home Page test" finished-at="2023-06-21T17:47:13Z" duration-ms="73348">
+    <test started-at="2023-06-22T10:29:25Z" name="Home Page test" finished-at="2023-06-22T10:29:50Z" duration-ms="25624">
       <class name="com.qa.trcrm.tests.HomePageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.qa.trcrm.tests.HomePageTest@6986bbaf]" started-at="2023-06-21T17:45:59Z" name="setUp" finished-at="2023-06-21T17:47:10Z" duration-ms="70919" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.qa.trcrm.tests.HomePageTest@6986bbaf]" started-at="2023-06-22T10:29:25Z" name="setUp" finished-at="2023-06-22T10:29:49Z" duration-ms="24500" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyHomePageTitleTest()[pri:1, instance:com.qa.trcrm.tests.HomePageTest@6986bbaf]" started-at="2023-06-21T17:47:10Z" name="verifyHomePageTitleTest" finished-at="2023-06-21T17:47:10Z" duration-ms="51" status="PASS">
+        <test-method signature="verifyHomePageTitleTest()[pri:1, instance:com.qa.trcrm.tests.HomePageTest@6986bbaf]" started-at="2023-06-22T10:29:49Z" name="verifyHomePageTitleTest" finished-at="2023-06-22T10:29:49Z" duration-ms="40" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Test cases verifyHomePageTitleTest]]>
@@ -130,7 +130,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </line>
           </reporter-output>
         </test-method> <!-- verifyHomePageTitleTest -->
-        <test-method signature="verifyHomePageHeaderTest()[pri:2, instance:com.qa.trcrm.tests.HomePageTest@6986bbaf]" started-at="2023-06-21T17:47:10Z" name="verifyHomePageHeaderTest" finished-at="2023-06-21T17:47:10Z" duration-ms="135" status="PASS">
+        <test-method signature="verifyHomePageHeaderTest()[pri:2, instance:com.qa.trcrm.tests.HomePageTest@6986bbaf]" started-at="2023-06-22T10:29:49Z" name="verifyHomePageHeaderTest" finished-at="2023-06-22T10:29:49Z" duration-ms="88" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Test cases verifyHomePageHeaderTest]]>
@@ -140,7 +140,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </line>
           </reporter-output>
         </test-method> <!-- verifyHomePageHeaderTest -->
-        <test-method signature="verifyLoggedInUserTest()[pri:3, instance:com.qa.trcrm.tests.HomePageTest@6986bbaf]" started-at="2023-06-21T17:47:10Z" name="verifyLoggedInUserTest" finished-at="2023-06-21T17:47:10Z" duration-ms="53" status="PASS">
+        <test-method signature="verifyLoggedInUserTest()[pri:3, instance:com.qa.trcrm.tests.HomePageTest@6986bbaf]" started-at="2023-06-22T10:29:49Z" name="verifyLoggedInUserTest" finished-at="2023-06-22T10:29:49Z" duration-ms="36" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Test cases verifyLoggedInUserTest]]>
@@ -150,7 +150,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </line>
           </reporter-output>
         </test-method> <!-- verifyLoggedInUserTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.trcrm.tests.HomePageTest@6986bbaf]" started-at="2023-06-21T17:47:10Z" name="tearDown" finished-at="2023-06-21T17:47:13Z" duration-ms="2169" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.trcrm.tests.HomePageTest@6986bbaf]" started-at="2023-06-22T10:29:49Z" name="tearDown" finished-at="2023-06-22T10:29:50Z" duration-ms="947" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
