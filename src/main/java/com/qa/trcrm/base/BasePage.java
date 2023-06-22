@@ -100,9 +100,22 @@ public class BasePage {
 	 * @return
 	 */
 	public Properties init_prop() {
+
+		String env = System.getProperty("env");
+		if(env==null) {
+			env="qa";
+		}
+		String path;
 		prop = new Properties();
 		try {
-			FileInputStream fis = new FileInputStream("./src/main/java/com/qa/trcrm/config/config.properties");
+			if (env.equalsIgnoreCase("qa")) {
+				path = "./src/main/java/com/qa/trcrm/config/config_qa.properties";
+			} else if (env.equalsIgnoreCase("prod")) {
+				path = "./src/main/java/com/qa/trcrm/config/config_prod.properties";
+			} else {
+				path = "./src/main/java/com/qa/trcrm/config/config.properties";
+			}
+			FileInputStream fis = new FileInputStream(path);
 			prop.load(fis);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -116,6 +129,7 @@ public class BasePage {
 
 	/**
 	 * This method is used to take screenshot and return path
+	 * 
 	 * @return path
 	 */
 	public String getScreenshot() {

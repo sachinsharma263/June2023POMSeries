@@ -10,6 +10,7 @@ import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 import com.qa.trcrm.base.BasePage3;
+import com.qa.trcrm.pojo.Credentials;
 import com.qa.trcrm.utils.AppConstants;
 import com.qa.trcrm.utils.ElementUtil;
 import com.qa.trcrm.utils.JavaScriptUtil;
@@ -69,6 +70,17 @@ public class LoginPage extends BasePage3 {
 		util.doClick(loginBtn);
 		
 
+		return new HomePage(driver);
+	}
+	public HomePage doLogin(Credentials credentials)
+	{
+		util.doClear(email);
+		util.doSendKeys(email, credentials.getEmail());
+		util.doClear(password);
+		util.doSendKeys(password, credentials.getPassword());
+		
+		util.doClick(loginBtn);
+		
 		return new HomePage(driver);
 	}
 
