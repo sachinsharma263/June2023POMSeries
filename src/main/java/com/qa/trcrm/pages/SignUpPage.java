@@ -9,4 +9,7 @@ public class SignUpPage {
 	public SignUpPage(WebDriver driver) {
 		this.driver = driver;
 	}
+	public void m2() {
+		System.out.println("m2--remote");
+	}
 }
