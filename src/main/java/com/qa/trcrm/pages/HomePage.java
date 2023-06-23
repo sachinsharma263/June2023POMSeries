@@ -15,6 +15,8 @@ public class HomePage {
 
 	By homePageHeader = By.xpath("//span[text()='Homepage']");
 	By loggedInUser=By.xpath("//span[text()=' sachin sharma']");
+	
+	By contactsPageLink = By.xpath("//li[@id='contactMenuLi']/a");
 
 	public HomePage(WebDriver driver) {
 		this.driver = driver;
@@ -34,5 +36,11 @@ public class HomePage {
 	}
 	public String loggedInUser() {
 		return util.doGetText(loggedInUser);
+	}
+	public ContactsPage goToContactsPage() {
+		util.waitForPresenceOfElementLocated(contactsPageLink);
+		jsUtil.clickElementByJS(util.getElement(contactsPageLink));
+		
+		return new ContactsPage(driver);
 	}
 }
