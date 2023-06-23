@@ -8,4 +8,8 @@ public class AppConstants {
 	
 	public final static int DEFAULT_TIME_OUT=20;
 	public static final String TEST_SHEET_DATA = "./src/main/java/com/qa/trcrm/testdata/TestData.xlsx";
+	
+	public static final String PERSON_ADDED_MSG="Person added.";
+	
+	public final static String CONTACT_PAGE_HEADER="Contacts";
 }
