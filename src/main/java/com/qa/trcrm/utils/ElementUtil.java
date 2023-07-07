@@ -1,5 +1,7 @@
 package com.qa.trcrm.utils;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,7 +18,7 @@ public class ElementUtil {
 
 	public ElementUtil(WebDriver driver) {
 		this.driver = driver;
-		wait = new WebDriverWait(driver, AppConstants.DEFAULT_TIME_OUT);
+		wait = new WebDriverWait(driver,Duration.ofSeconds(AppConstants.DEFAULT_TIME_OUT));
 		jsUtil = new JavaScriptUtil(driver);
 		action = new Actions(driver);
 	}
