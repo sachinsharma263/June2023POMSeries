@@ -10,8 +10,8 @@
 	<url>http://www.example.com</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>1.7</maven.compiler.source>
-		<maven.compiler.target>1.7</maven.compiler.target>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -24,7 +24,7 @@
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>3.141.59</version>
+			<version>4.10.0</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
 		<dependency>
@@ -80,11 +80,18 @@
 			<version>1.0-beta</version>
 		</dependency>
 		<dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.24</version>
-            <optional>true</optional>
-</dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.24</version>
+			<optional>true</optional>
+		</dependency>
+		<!-- Jira Integration with Selenium || Raise a bug for failure test cases 
+			|| No Manual Bug in JIRA -->
+		<dependency>
+			<groupId>net.rcarz</groupId>
+			<artifactId>jira-client</artifactId>
+			<version>0.5</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<pluginManagement>
@@ -143,15 +150,15 @@
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>2.20</version>
 					<configuration>
-						 					<!--	<systemPropertyVariables> 
+						<!--	<systemPropertyVariables> 
 						 						<email>${Demail}</email> 
 						 							<pass>${Dpass}</pass> 
 						 						</systemPropertyVariables> -->
 						<suiteXmlFiles>
-<!--							 <suiteXmlFile>src/main/resources/runners/maven_testng.xml</suiteXmlFile> -->
-<!--							 <suiteXmlFile>src/main/resources/runners/testng.xml</suiteXmlFile> -->
+							<!--							 <suiteXmlFile>src/main/resources/runners/maven_testng.xml</suiteXmlFile> -->
+							<!--							 <suiteXmlFile>src/main/resources/runners/testng.xml</suiteXmlFile> -->
 							<suiteXmlFile>src/test/resources/testrunners/testng_regression.xml</suiteXmlFile>
-<!--							 <suiteXmlFile>src/test/resources/testrunners/testng_sanity.xml</suiteXmlFile> -->
+<!--														 <suiteXmlFile>src/test/resources/testrunners/testng_sanity.xml</suiteXmlFile> -->
 						</suiteXmlFiles>
 					</configuration>
 				</plugin>
