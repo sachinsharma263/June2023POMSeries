@@ -1,5 +1,7 @@
 package com.qa.trcrm.tests;
 
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
@@ -16,6 +18,7 @@ import com.qa.trcrm.pages.HomePage;
 import com.qa.trcrm.pages.LoginPage;
 import com.qa.trcrm.pojo.Credentials;
 import com.qa.trcrm.utils.AppConstants;
+import com.qa.trcrm.utils.JiraPolicy;
 
 public class LoginPageTest {
 
@@ -42,6 +45,7 @@ public class LoginPageTest {
 		Assert.assertEquals(title, AppConstants.LOGIN_PAGE_TITLE);
 	}
 
+	@JiraPolicy(logTicketReady = true)
 	@Test(priority = 2)
 	public void verifySignNowLinkTest() {
 		Assert.assertTrue(loginPage.verifySignUpLink());

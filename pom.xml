@@ -80,11 +80,18 @@
 			<version>1.0-beta</version>
 		</dependency>
 		<dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.24</version>
-            <optional>true</optional>
-</dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.24</version>
+			<optional>true</optional>
+		</dependency>
+		<!-- Jira Integration with Selenium || Raise a bug for failure test cases 
+			|| No Manual Bug in JIRA -->
+		<dependency>
+			<groupId>net.rcarz</groupId>
+			<artifactId>jira-client</artifactId>
+			<version>0.5</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<pluginManagement>
@@ -143,15 +150,15 @@
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>2.20</version>
 					<configuration>
-						 					<!--	<systemPropertyVariables> 
+						<!--	<systemPropertyVariables> 
 						 						<email>${Demail}</email> 
 						 							<pass>${Dpass}</pass> 
 						 						</systemPropertyVariables> -->
 						<suiteXmlFiles>
-<!--							 <suiteXmlFile>src/main/resources/runners/maven_testng.xml</suiteXmlFile> -->
-<!--							 <suiteXmlFile>src/main/resources/runners/testng.xml</suiteXmlFile> -->
+							<!--							 <suiteXmlFile>src/main/resources/runners/maven_testng.xml</suiteXmlFile> -->
+							<!--							 <suiteXmlFile>src/main/resources/runners/testng.xml</suiteXmlFile> -->
 							<suiteXmlFile>src/test/resources/testrunners/testng_regression.xml</suiteXmlFile>
-<!--							 <suiteXmlFile>src/test/resources/testrunners/testng_sanity.xml</suiteXmlFile> -->
+<!--														 <suiteXmlFile>src/test/resources/testrunners/testng_sanity.xml</suiteXmlFile> -->
 						</suiteXmlFiles>
 					</configuration>
 				</plugin>
