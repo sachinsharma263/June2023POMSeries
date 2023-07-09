@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
@@ -102,8 +104,8 @@ public class BasePage {
 	public Properties init_prop() {
 
 		String env = System.getProperty("env");
-		if(env==null) {
-			env="qa";
+		if (env == null) {
+			env = "qa";
 		}
 		String path;
 		prop = new Properties();
@@ -135,7 +137,9 @@ public class BasePage {
 	public String getScreenshot() {
 
 		File src = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
-		String path = System.getProperty("user.dir") + "/screenshots/" + System.currentTimeMillis() + ".png";
+		// String path = System.getProperty("user.dir") + "/screenshots/" +
+		// System.currentTimeMillis() + ".png";
+		String path = System.getProperty("user.dir") + "/screenshots/" + getDateTime() + ".png";
 
 		File destPath = new File(path);
 
@@ -147,5 +151,15 @@ public class BasePage {
 		}
 
 		return path;
+	}
+
+	/*
+	 * This method is used to return the formatted date-time string
+	 */
+	public String getDateTime() {
+
+		Date date = new Date();
+		SimpleDateFormat dateFormat = new SimpleDateFormat("ddMMyyhhmma");
+		return dateFormat.format(date);
 	}
 }
