@@ -170,11 +170,7 @@
 					<version>2.20</version>
 
 					<configuration>
-						<systemPropertyVariables>
-							<email2>${Demail}</email2>
-							<pass2>${Dpass}</pass2>
-
-						</systemPropertyVariables>
+						
 
 						<!-- <suiteXmlFiles> <suiteXmlFile>src/main/resources/runners/maven_testng.xml</suiteXmlFile> 
 							<suiteXmlFile>src/main/resources/runners/testng.xml</suiteXmlFile> <suiteXmlFile>src/test/resources/testng_regression.xml</suiteXmlFile> 
