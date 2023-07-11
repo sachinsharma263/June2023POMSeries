@@ -19,6 +19,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
 
+import com.qa.trcrm.utils.Log;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BasePage {
@@ -136,6 +138,7 @@ public class BasePage {
 	 */
 	public String getScreenshot() {
 
+		Log.info("taking screenshot");
 		File src = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
 		// String path = System.getProperty("user.dir") + "/screenshots/" +
 		// System.currentTimeMillis() + ".png";
@@ -144,7 +147,9 @@ public class BasePage {
 		File destPath = new File(path);
 
 		try {
+			Log.info("copying screenshot to path: " + path);
 			FileUtils.copyFile(src, destPath);
+			Log.info("screenshot succesfully coped");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -158,8 +163,10 @@ public class BasePage {
 	 */
 	public String getDateTime() {
 
+		Log.info("gettig time");
 		Date date = new Date();
 		SimpleDateFormat dateFormat = new SimpleDateFormat("ddMMyyhhmma");
+		Log.info("returning datetime: " + dateFormat.format(date));
 		return dateFormat.format(date);
 	}
 }
