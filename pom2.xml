@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
 	<groupId>June2023POMSeries</groupId>
 	<artifactId>June2023POMSeries</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+
 	<name>June2023POMSeries</name>
 	<!-- FIXME change it to the project's website -->
 	<url>http://www.example.com</url>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -74,16 +80,11 @@
 			<artifactId>ooxml-schemas</artifactId>
 			<version>1.1</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>openxml4j</artifactId>
 			<version>1.0-beta</version>
-		</dependency>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.18.24</version>
-			<optional>true</optional>
 		</dependency>
 		<!-- Jira Integration with Selenium || Raise a bug for failure test cases 
 			|| No Manual Bug in JIRA -->
@@ -92,8 +93,7 @@
 			<artifactId>jira-client</artifactId>
 			<version>0.5</version>
 		</dependency>
-		
-<dependency>
+		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
 			<version>2.19.0</version>
@@ -103,11 +103,12 @@
 			<artifactId>log4j-core</artifactId>
 			<version>2.19.0</version>
 		</dependency>
-
 	</dependencies>
+
+
 	<build>
-		<pluginManagement>
-			<!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+		<pluginManagement><!-- lock down plugins versions to avoid using Maven 
+				defaults (may be moved to parent pom) -->
 			<plugins>
 				<!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
 				<plugin>
@@ -161,18 +162,27 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>2.20</version>
+
 					<configuration>
-						<!--	<systemPropertyVariables> 
-						 						<email>${Demail}</email> 
-						 							<pass>${Dpass}</pass> 
-						 						</systemPropertyVariables> -->
+						<systemPropertyVariables>
+							<email>${Demail}</email>
+							<pass>${Dpass}</pass>
+
+						</systemPropertyVariables>
+
+						<!-- <suiteXmlFiles> <suiteXmlFile>src/main/resources/runners/maven_testng.xml</suiteXmlFile> 
+							<suiteXmlFile>src/main/resources/runners/testng.xml</suiteXmlFile> <suiteXmlFile>src/test/resources/testng_regression.xml</suiteXmlFile> 
+							<suiteXmlFile>src/test/resources/testng_sanity.xml</suiteXmlFile> </suiteXmlFiles> -->
+
 						<suiteXmlFiles>
-							<!--							 <suiteXmlFile>src/main/resources/runners/maven_testng.xml</suiteXmlFile> -->
-							<!--							 <suiteXmlFile>src/main/resources/runners/testng.xml</suiteXmlFile> -->
-							<suiteXmlFile>src/test/resources/testrunners/testng_regression.xml</suiteXmlFile>
-							<!--														 <suiteXmlFile>src/test/resources/testrunners/testng_sanity.xml</suiteXmlFile> -->
+							<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
 						</suiteXmlFiles>
+
+
+
+
 					</configuration>
+
 				</plugin>
 			</plugins>
 		</pluginManagement>

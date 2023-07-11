@@ -2,25 +2,22 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="trcrm app regression suite">
 	<listeners>
-<!--		<listener class-name="com.qa.trcrm.listeners.pdfListener"></listener>-->
-<listener class-name="com.qa.trcrm.listeners.ExtentReportListener"></listener>
-<listener class-name="com.qa.trcrm.listeners.TestJiraListener"></listener>
+		<!--		<listener class-name="com.qa.trcrm.listeners.pdfListener"></listener>-->
+		<listener class-name="com.qa.trcrm.listeners.ExtentReportListener"></listener>
+		<listener class-name="com.qa.trcrm.listeners.TestJiraListener"></listener>
+		<listener class-name="com.qa.trcrm.listeners.LogListener"></listener>
 	</listeners>
 	<test name="Login Page test" verbose="2">
-		
 		<classes>
 			<class name="com.qa.trcrm.tests.LoginPageTest" />
 		</classes>
 	</test>
 	<test name="Home Page test" verbose="2">
-		
 		<classes>
 			<class name="com.qa.trcrm.tests.HomePageTest" />
 		</classes>
 	</test>
-	
 	<test name="Contacts Page test" verbose="2">
-		
 		<classes>
 			<class name="com.qa.trcrm.tests.ContactsPageTest" />
 		</classes>

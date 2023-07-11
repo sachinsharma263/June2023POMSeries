@@ -32,7 +32,7 @@ public class JiraServiceProvider {
 			//fleuntCreate.field(Field.REPORTER, reporterName);
 			Issue newIssue = fleuntCreate.execute();
 			System.out.println("new issue created in jira with ID: " + newIssue);
-			//Log.info("new issue created in jira with ID: " + newIssue);
+			Log.info("new issue created in jira with ID: " + newIssue);
 
 		} catch (JiraException e) {
 			e.printStackTrace();

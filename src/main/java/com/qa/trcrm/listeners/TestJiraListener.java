@@ -7,6 +7,7 @@ import org.testng.ITestResult;
 
 import com.qa.trcrm.utils.JiraPolicy;
 import com.qa.trcrm.utils.JiraServiceProvider;
+import com.qa.trcrm.utils.Log;
 
 
 public class TestJiraListener implements ITestListener {
@@ -29,7 +30,7 @@ try {
 		JiraPolicy jiraPolicy = result.getMethod().getConstructorOrMethod().getMethod().getAnnotation(JiraPolicy.class);
 		boolean isTicketReady = jiraPolicy.logTicketReady();
 		if (isTicketReady) {
-			//Log.info("Logging bug in jira");
+			Log.info("Logging bug in jira");
 			// raise jira ticket:
 			System.out.println("is ticket ready for JIRA: " + isTicketReady);
 			JiraServiceProvider jiraSp = new JiraServiceProvider("https://sachin-automation-test.atlassian.net/",
