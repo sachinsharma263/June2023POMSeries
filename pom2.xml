@@ -171,8 +171,8 @@
 
 					<configuration>
 						<systemPropertyVariables>
-							<email>${Demail}</email>
-							<pass>${Dpass}</pass>
+							<email>${Demail2}</email>
+							<pass>${Dpass2}</pass>
 
 						</systemPropertyVariables>
 
