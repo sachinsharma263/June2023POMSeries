@@ -41,6 +41,7 @@ public class LoginPageTest {
 
 		if (System.getProperty("email")==null && System.getProperty("pass")==null) {
 			credentials = new Credentials(prop.getProperty("username"), prop.getProperty("password"));
+		}
 		else if (System.getProperty("email").isEmpty() && System.getProperty("pass").isEmpty()) {
 			credentials = new Credentials(prop.getProperty("username"), prop.getProperty("password"));
 		} else {
