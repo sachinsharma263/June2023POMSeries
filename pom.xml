@@ -92,8 +92,7 @@
 			<artifactId>jira-client</artifactId>
 			<version>0.5</version>
 		</dependency>
-		
-<dependency>
+		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
 			<version>2.19.0</version>
@@ -103,7 +102,6 @@
 			<artifactId>log4j-core</artifactId>
 			<version>2.19.0</version>
 		</dependency>
-
 	</dependencies>
 	<build>
 		<pluginManagement>
@@ -162,15 +160,11 @@
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>2.20</version>
 					<configuration>
-						<!--	<systemPropertyVariables> 
-						 						<email>${Demail}</email> 
-						 							<pass>${Dpass}</pass> 
-						 						</systemPropertyVariables> -->
 						<suiteXmlFiles>
 							<!--							 <suiteXmlFile>src/main/resources/runners/maven_testng.xml</suiteXmlFile> -->
 							<!--							 <suiteXmlFile>src/main/resources/runners/testng.xml</suiteXmlFile> -->
-							<suiteXmlFile>src/test/resources/testrunners/testng_regression.xml</suiteXmlFile>
-							<!--														 <suiteXmlFile>src/test/resources/testrunners/testng_sanity.xml</suiteXmlFile> -->
+							<!--							<suiteXmlFile>src/test/resources/testrunners/testng_regression.xml</suiteXmlFile>-->
+							<suiteXmlFile>src/test/resources/testrunners/testng_sanity.xml</suiteXmlFile>
 						</suiteXmlFiles>
 					</configuration>
 				</plugin>

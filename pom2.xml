@@ -169,7 +169,6 @@
 							<pass>${Dpass}</pass>
 
 						</systemPropertyVariables>
-
 						<!-- <suiteXmlFiles> <suiteXmlFile>src/main/resources/runners/maven_testng.xml</suiteXmlFile> 
 							<suiteXmlFile>src/main/resources/runners/testng.xml</suiteXmlFile> <suiteXmlFile>src/test/resources/testng_regression.xml</suiteXmlFile> 
 							<suiteXmlFile>src/test/resources/testng_sanity.xml</suiteXmlFile> </suiteXmlFiles> -->
